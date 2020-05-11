@@ -7,7 +7,7 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=40)
     description = models.CharField(max_length=250)
     profile_picture = models.ImageField(upload_to='profile_photos', default='profile_photos/default_profile_pic.jpg')
     created_at = models.DateField(default=timezone.now)
