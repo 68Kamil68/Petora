@@ -22,5 +22,6 @@ from users import api_views as users_api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/register/', users_api_views.RegisterUser.as_view())
+    path('api/register/', users_api_views.RegisterUser.as_view()),
+    path('api/login/', users_api_views.Login.as_view())
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
