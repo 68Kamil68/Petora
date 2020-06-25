@@ -7,8 +7,6 @@ User = get_user_model()
 
 class TestUserView(APITestCase):
     def setUp(self):
-        user = User.objects.create_user(
-            'testUser', 'test@test.com', 'testpassw12')
         client = APIClient()
 
     def test_status_create_user(self):
